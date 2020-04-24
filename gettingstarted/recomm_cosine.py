@@ -1,7 +1,7 @@
-from model import create_dense, movie_id_dict, mean_rating
+from gettingstarted.model import create_dense, movie_id_dict, mean_rating
 import numpy as np
 from scipy.spatial import distance
-from recommender import convert_user_input
+from gettingstarted.recommender import convert_user_input
 import pandas as pd
 from fuzzywuzzy import fuzz
 

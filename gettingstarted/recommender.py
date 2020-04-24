@@ -1,6 +1,6 @@
 """Python class that recommends movies"""
 from joblib import load
-from model import create_dense, movie_id_dict, mean_rating
+from gettingstarted.model import create_dense, movie_id_dict, mean_rating
 import numpy as np
 import pandas as pd
 from fuzzywuzzy import fuzz
