@@ -38,6 +38,6 @@ def cosine_similarity(number_of_recomm, user_input_movies, user_input_ratings):
     #Take the first user and suggest movies that person liked
     random_mov = np.random.randint(6)
     movies_list = list(neighbors_m.iloc[random_mov].sort_values(ascending = False)
-                        .head(number_of_recomm*2).index.map(movie_id_dict))
+                        .head(number_of_recomm).index.map(movie_id_dict))
 
     return movies_list
