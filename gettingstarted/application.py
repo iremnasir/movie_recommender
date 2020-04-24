@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
-from recommender import user_recommendation
-from recomm_cosine import cosine_similarity
+from gettingstarted.recommender import user_recommendation
+from gettingstarted.recomm_cosine import cosine_similarity
 
 import warnings
 warnings.filterwarnings("ignore")
