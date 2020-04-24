@@ -8,7 +8,7 @@ from scipy.spatial import distance
 
 #Load the pretrained model
 def get_model():
-    trained_NMF = load('NMF.joblib')
+    trained_NMF = load('./gettingstarted/NMF.joblib')
     return trained_NMF
 
 def convert_user_input(user_input_movies, user_input_ratings):

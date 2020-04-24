@@ -13,11 +13,16 @@ HOST = 'localhost'
 PORT = '5432'
 DB = 'movies'
 
+URL = os.getenv('DATABASE_URL')
 conn_string_mac = f'postgres://{HOST}:{PORT}/{DB}'
-engine = create_engine(conn_string_mac)
+#engine = create_engine(conn_string_mac)
 
 #Create engine
-engine = create_engine(conn_string_mac)
+#engine = create_engine(conn_string_mac)
+
+#Create heroku_engine
+engine = create_engine(URL)
+
 
 #Create dfs from database
 df_links = pd.read_sql_query('SELECT * from links',con=engine)
