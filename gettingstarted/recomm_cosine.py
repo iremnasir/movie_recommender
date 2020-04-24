@@ -24,10 +24,10 @@ def cosine_similarity(number_of_recomm, user_input_movies, user_input_ratings):
     UU = np.zeros((len(dense_matrix_user), len(dense_matrix_user)))
     UU = pd.DataFrame(UU, index=dense_matrix_user.index, columns=dense_matrix_user.index)
     # calculate pairwise similarities
-    for u in UU.index:
-        for v in UU.columns:
+    u = 0
+    for v in UU.columns:
         # 2. step: calculate similarities
-            UU.loc[u, v] = 1-distance.correlation(dense_matrix_user.loc[u],
+        UU.loc[u, v] = 1-distance.correlation(dense_matrix_user.loc[u],
                                                     dense_matrix_user.loc[v])
     active_user = 0
     # find similarities for active_user and sort it, take 1 to 5 entries
