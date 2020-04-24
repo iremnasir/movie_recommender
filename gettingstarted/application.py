@@ -32,3 +32,6 @@ def recommender():
     else:
         result = cosine_similarity(10, user_input_movies, user_input_ratings)
     return render_template('recommender.html', result=result, user_input=user_input)
+
+    if __name__ == "__main__":
+        app.run(host='0.0.0.0')
